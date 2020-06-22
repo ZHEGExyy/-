@@ -4,9 +4,6 @@ let yFirst = 0, pyFirst = 0
 let yChat, pyChat, yChat2, pyChat2
 let img5, y5, y5Target
 
-let img222
-let colortranseparent = 255
-
 let diu, wrong, right, complete
 
 let easing = 0.05
@@ -73,9 +70,6 @@ let x43, y43, flag43 = 0
 let img41, img42, img43///////////ok
 
 function preload() {
-
-    img222 = loadImage("222.png")
-
     imgFirst = loadImage("封面-01.png")
     imgChatBackground = loadImage("聊天背景.png")
     imgChat = loadImage("聊天.png")
@@ -190,19 +184,6 @@ function draw() {
     pyChat = pyChat + (yChat - pyChat) * easing
     image(imgChat, 0, pyChat, imgChat.width, imgChat.height)
 
-    // if(mouseX>0&mouseX<width&mouseY>0&mouseY<height & flag==-1){
-    //     flag=0
-    // }
-    // if(flag==0){
-    //     colortranseparent-=7
-    //     colortranseparent=constrain(colortranseparent,0,255)
-    // }
-    // push()
-    // tint(255, colortranseparent); 
-    // image(img222,0,0, img222.width , img222.height )
-    // pop()
-
-
     if (i > 4 & flag == 0) {
         itime += 1
         if (itime == 60) {
@@ -220,10 +201,6 @@ function draw() {
         y00 = y00 + (0 - y00) * easing
         itime = 1
     }
-
-
-
-
 
 
     //背景
